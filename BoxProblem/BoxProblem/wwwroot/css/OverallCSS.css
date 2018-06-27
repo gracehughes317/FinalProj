@@ -114,3 +114,16 @@ h1 {
 .txt-size {
     font-size: 50%;
 }
+.w3-animate-opacity {
+    animation: opac 3.5s
+}
+
+@keyframes opac {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
