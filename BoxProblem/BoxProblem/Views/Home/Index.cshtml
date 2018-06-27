@@ -1,7 +1,6 @@
-﻿@using BoxProblem.Data
-@model List<BoxInventory>
+﻿@model IEnumerable<BoxProblem.Data.BoxInventory>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Index";
 }
 <h2>Home</h2>
 <button onclick="location.href='@Url.Action("Add", "Home")'">Add</button>
@@ -12,22 +11,22 @@
 <div>
     <table>
         <tr class="tableHeader">
-            <th><span class="sortObj">inv  </span> </th>
-            <th><span class="sortObj">cost  </span></th>
-            <th><span class="sortObj">volume  </span></th>
-            <th><span class="sortObj">weight  </span></th>
-            <th><span class="sortObj">liquid  </span></th>
+            <th>@Html.DisplayNameFor(model => model.InventoryCount)</th>
+            <th>@Html.DisplayNameFor(model => model.Cost)</th>
+            <th>@Html.DisplayNameFor(model => model.Volume)</th>
+            <th>@Html.DisplayNameFor(model => model.Weight)</th>
+            <th>@Html.DisplayNameFor(model => model.CanHoldLiquid)</th>
             <th><br /></th>
         </tr>
 
-        @foreach (BoxInventory box in Model)
+        @foreach (var box in Model)
         {
             <tr>
-                <th>@box.InventoryCount</th>
-                <th>@box.Cost</th>
-                <th>@box.Volume</th>
-                <th>@box.Weight</th>
-                <th>@box.CanHoldLiquid</th>
+                <td>@Html.DisplayFor(modelItem => box.InventoryCount)</td>
+                <td>@Html.DisplayFor(modelItem => box.Cost)</td>
+                <td>@Html.DisplayFor(modelItem => box.Volume)</td>
+                <td>@Html.DisplayFor(modelItem => box.Weight)</td>
+                <td>@Html.DisplayFor(modelItem => box.CanHoldLiquid)</td>
             </tr>
         } 
     </table>

@@ -18,10 +18,12 @@ namespace BoxProblem.Controllers
         {
             service = new BoxInventoryService(context);
         }
+
         public IActionResult Index()
         {
-            return View(new List<BoxInventory>());
+            return View(service.GetAllBoxInventorys());
         }
+
         public IActionResult Add()
         {
             return View();
