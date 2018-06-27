@@ -10,7 +10,7 @@
 <form action="~/Home/EditBox" method="post">
     Weight: <input type="text" name="Weight" required="required" value="@Model.Weight"><br>
     Volume: <input type="text" name="Volume" required="required" value="@Model.Volume"><br>
-    Can hold liquid: <input type="text" name="CanHoldLiquid" required="required"value="@Model.CanHoldLiquid"><br>
+    Can hold liquid: <input type="checkbox" name="CanHoldLiquid" required="required"value="@Model.CanHoldLiquid"><br>
     Cost: <input type="text" name="Cost" required="required" value="@Model.Cost"><br>
     Number in inventory: <input type="text" name="InventoryCount" required="required" value="@Model.InventoryCount"><br>
     <input type="submit" value="Submit" @Html.ActionLink("Back to List", "Index")>

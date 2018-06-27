@@ -4,7 +4,7 @@
 }
 <h2>Home</h2>
 <button onclick="location.href='@Url.Action("Add", "Home")'">Add</button>
-<button onclick="location.href='@Url.Action("Edit", "Home")'">Edit</button>
+<!--<button onclick="location.href='Url.Action("Edit", "Home")'">Edit</button>-->
 
 
 <p>Inventory</p>
@@ -28,7 +28,7 @@
                 <td>@Html.DisplayFor(modelItem => box.Weight)</td>
                 <td>@Html.DisplayFor(modelItem => box.CanHoldLiquid)</td>
             </tr>
-        } 
+        }
     </table>
 
 </div>
