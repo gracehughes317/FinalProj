@@ -6,11 +6,11 @@
 <h2>Add</h2>
 
 <form action="~/Home/Create" method="post">
-    Weight: <input type="text" name="weight"><br>
-    Volume: <input type="text" name="volume"><br>
-    Can hold liquid: <input type="text" name="liquid"><br>
-    Cost: <input type="text" name="cost"><br>
-    Number in inventory: <input type="text" name="count"><br>
+    Weight: <input type="text" name="weight" required="required"><br>
+    Volume: <input type="text" name="volume" required="required"><br>
+    Can hold liquid: <input type="text" name="liquid"required="required"><br>
+    Cost: <input type="text" name="cost"required="required"><br>
+    Number in inventory: <input type="text" name="count"required="required"><br>
     <input type="submit" value="Submit" @Html.ActionLink("Back to List", "Index")>
 </form>
 

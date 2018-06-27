@@ -12,24 +12,24 @@
 <div>
     <table>
         <tr class="tableHeader">
-            <th><span class="sortObj">inv</span> </th>
-            <th><span class="sortObj">cost</span></th>
-            <th><span class="sortObj">volume</span></th>
-            <th><span class="sortObj">weight</span></th>
-            <th><span class="sortObj">liq</span></th>
+            <th><span class="sortObj">inv  </span> </th>
+            <th><span class="sortObj">cost  </span></th>
+            <th><span class="sortObj">volume  </span></th>
+            <th><span class="sortObj">weight  </span></th>
+            <th><span class="sortObj">liquid  </span></th>
             <th><br /></th>
         </tr>
 
-        @foreach (BoxInventory aaa in Model)
+        @foreach (BoxInventory box in Model)
         {
             <tr>
-                <th>@aaa.InventoryCount</th>
-                <th>@aaa.Cost</th>
-                <th>@aaa.Volume</th>
-                <th>@aaa.Weight</th>
-                <th>@aaa.CanHoldLiquid</th>
+                <th>@box.InventoryCount</th>
+                <th>@box.Cost</th>
+                <th>@box.Volume</th>
+                <th>@box.Weight</th>
+                <th>@box.CanHoldLiquid</th>
             </tr>
-        } }
+        } 
     </table>
 
 </div>

@@ -56,6 +56,8 @@ namespace BoxProblem.Controllers
         {
             if (ModelState.IsValid)
             {
+                toAdd.CreatedAt = DateTime.Now;
+
                 service.AddBoxInventory(toAdd);
                 return RedirectToAction("Index");
             }
