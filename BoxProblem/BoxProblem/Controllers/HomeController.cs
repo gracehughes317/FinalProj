@@ -24,30 +24,6 @@ namespace BoxProblem.Controllers
             return View(service.GetAllBoxInventorys());
         }
 
-        public IActionResult Add()
-        {
-            return View();
-        }
-
-        public IActionResult Add(BoxInventory box)
-        {
-            return View(box);
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
@@ -71,6 +47,7 @@ namespace BoxProblem.Controllers
 
             return View(toAdd);
         }
+
         public ActionResult Edit(BoxInventory toEdit)
         {
             return View(toEdit);
@@ -81,8 +58,6 @@ namespace BoxProblem.Controllers
         {
             if (ModelState.IsValid)
             {
-
-
                 service.SaveEdits(toEdit);
                 return RedirectToAction("Index");
             }
@@ -90,5 +65,4 @@ namespace BoxProblem.Controllers
             return View(toEdit);
         }
     }
-
-        }
+}
