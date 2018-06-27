@@ -70,5 +70,35 @@ namespace BoxProblem.Services
         {
             return repository.FilterCreatedAt(date);
         }
+
+        public List<BoxInventory> SortId(bool increasing)
+        {
+            return repository.SortId(increasing);
+        }
+
+        public List<BoxInventory> SortWeight(bool increasing)
+        {
+            return repository.SortWeight(increasing);
+        }
+
+        public List<BoxInventory> SortVolume(bool increasing)
+        {
+            return repository.SortVolume(increasing);
+        }
+
+        public List<BoxInventory> SortCost(bool increasing)
+        {
+            return repository.SortCost(increasing);
+        }
+
+        public List<BoxInventory> SortCount(bool increasing)
+        {
+            return repository.SortCount(increasing);
+        }
+
+        public List<BoxInventory> SortCreatedAt(bool increasing)
+        {
+            return repository.SortCreatedAt(increasing);
+        }
     }
 }
