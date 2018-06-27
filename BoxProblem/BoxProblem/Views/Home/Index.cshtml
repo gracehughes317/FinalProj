@@ -5,7 +5,22 @@
 }
 <h2>Home</h2>
 <button onclick="location.href='@Url.Action("Add", "Home")'">Add</button>
-<button onclick="location.href='@Url.Action("Edit", "Home")'">Add</button>
-<button onclick="location.href='@Url.Action("Details", "Home")'">Add</button>
+<button onclick="location.href='@Url.Action("Edit", "Home")'">Edit</button>
+
 
 <p>Inventory</p>
+<div>
+    <table>
+        @foreach (BoxInventory box in Model)
+        {
+            <tr>
+                <th>@box.InventoryCount</th>
+                <th>@box.Cost</th>
+                <th>@box.Volume</th>
+                <th>@box.Weight</th>
+                <th>@box.CanHoldLiquid</th>
+            </tr>
+        }
+    </table>
+
+</div>
