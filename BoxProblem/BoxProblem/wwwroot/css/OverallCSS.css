@@ -1,22 +1,88 @@
 ﻿.icon{
-    height: 100px;
+    height: 65px;
     width: auto;
-    padding: 10px;
 
 }
 .title {
     font-size: 50px;
-    font-family: Snell Roundhand, cursive;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
     display: inline;
+    color: #d2d2d2;
+    margin-top: 30px;
 }
 .topp{
-    padding: 10px;
+    padding: 0px;
     background-color: white;
-    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    border-bottom-style:outset;
+    border-bottom-width: 2px;
+    margin: auto;
+    border-color: #bcbcbc;
+    z-index: 1;
 }
 .cent{
     text-align: center;
 }
 .bcol {
     background-color: #E1D0B7;
+    height: 100%;
+}
+.mySlides {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    z-index: 2;
+}
+.subtitle {
+    font-size: 25px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: inline;
+    color: #d2d2d2;
+    margin-right: -250px;
+} 
+.abs-pos {
+    position: absolute;
+    z-index:1;
+    text-align: center;
+    margin-top: 350px;
+}
+#carouselExampleSlidesOnly {
+    z-index: 0;
+}
+#navbar{
+    overflow: hidden;
+}
+#navbar a {
+        float: left;
+        display: block;
+    }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.padding-top {
+    padding-top: 15px;
+}
+.padding-top2 {
+    padding-top: 2px;
+}
+.subtitle:link {
+    text-decoration: none;
+    color: #d2d2d2;
+}
+.subtitle:visited {
+    text-decoration: none;
+    color: #d2d2d2;
+}
+.subtitle:hover {
+    text-decoration: underline;
+    color: #d2d2d2;
+}
+.subtitle:active {
+    text-decoration: none;
+    color: #d2d2d2;
 }
