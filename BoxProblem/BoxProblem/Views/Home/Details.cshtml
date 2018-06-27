@@ -1,0 +1,14 @@
+﻿@using BoxProblem.Data
+@model BoxInventory
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+    Weight:@Model.Weight
+    Volume: @Model.Volume
+    Can hold liquid:@Model.CanHoldLiquid"
+    Cost: @Model.Cost"
+    Number in inventory: @Model.InventoryCount
+<button onclick=@Html.ActionLink("Back to List", "Index")/>
