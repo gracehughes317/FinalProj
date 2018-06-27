@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BoxProblem.Models;
+using BoxProblem.Data;
 
 namespace BoxProblem.Controllers
 {
@@ -12,7 +13,7 @@ namespace BoxProblem.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new List<BoxInventory>());
         }
         public IActionResult Add()
         {
