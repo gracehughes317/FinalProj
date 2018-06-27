@@ -5,12 +5,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BoxProblem.Models;
-using BoxProblem.Data;
 
 namespace BoxProblem.Controllers
 {
     public class HomeController : Controller
     {
+        private BoxInventoryService service;
+
+        public HomeController(ApplicationDbContext context)
+        {
+            service = new BoxInventoryService(context);
+        }
         public IActionResult Index()
         {
             return View(new List<BoxInventory>());
@@ -19,7 +24,10 @@ namespace BoxProblem.Controllers
         {
             return View();
         }
-
+        public IActionResult Add()
+        {
+            return View();
+        }
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -38,5 +46,23 @@ namespace BoxProblem.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(BoxInventory toAdd)
+        {
+            if (ModelState.IsValid)
+            {
+                service.AddBoxInventory(toAdd);
+                return RedirectToAction("Index");
+            }
+
+            return View(toAdd);
+        }
     }
 }
+using BoxProblem.Data;
