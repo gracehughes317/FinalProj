@@ -1,0 +1,22 @@
+﻿@model BoxProblem.Data.BoxInventory
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h2>Add</h2>
+
+<form action="/action_page.php">
+    Weight: <input type="text" name="weight"><br>
+    Volume: <input type="text" name="volume"><br>
+    Can hold liquid: <input type="text" name="liquid"><br>
+    Cost: <input type="text" name="cost"><br>
+    Number in inventory: <input type="text" name="count"><br>
+    <input type="submit" value="Submit" @Html.ActionLink("Back to List", "Index")>
+</form>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+
