@@ -2,10 +2,24 @@
 @{
     ViewBag.Title = "Index";
 }
-
 <h2>Home</h2>
-
 @Html.ActionLink("Add", "Create")
+
+<p>Choose parameter to search by:</p>
+
+<form action="~/Home/Search" method="post">
+    Inventory Count: <input type="checkbox" name="InventoryBox" />
+    Cost: <input type="checkbox" name="CostBox" />
+    Volume: <input type="checkbox" name="VolumeBox" />
+    Weight: <input type="checkbox" name="WeightBox" />
+    Date Created: <input type="checkbox" name="CreatedBox" />
+
+    <p></p>
+    Search <input type="number" name="toSearch" />
+</form>
+
+
+
 
 <table class="table">
     <tr class="tableHeader">
@@ -16,7 +30,6 @@
         <th>@Html.DisplayNameFor(model => model.CanHoldLiquid)</th>
         <th><br /></th>
     </tr>
-
     @foreach (var box in Model)
     {
         <tr>
@@ -31,5 +44,5 @@
                 @Html.ActionLink("Delete", "Delete", new { id = box.Id })
             </td>
         </tr>
-     }
+    }
 </table>
