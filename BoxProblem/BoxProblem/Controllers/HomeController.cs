@@ -28,7 +28,12 @@ namespace BoxProblem.Controllers
         {
             return View();
         }
-       
+
+        public IActionResult Add(BoxInventory box)
+        {
+            return View(box);
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -66,5 +71,24 @@ namespace BoxProblem.Controllers
 
             return View(toAdd);
         }
+        public ActionResult Edit(BoxInventory toEdit)
+        {
+            return View(toEdit);
+        }
+
+        [HttpPost]
+        public ActionResult EditBox(BoxInventory toEdit)
+        {
+            if (ModelState.IsValid)
+            {
+
+
+                service.SaveEdits(toEdit);
+                return RedirectToAction("Index");
+            }
+
+            return View(toEdit);
+        }
     }
-}
+
+        }
