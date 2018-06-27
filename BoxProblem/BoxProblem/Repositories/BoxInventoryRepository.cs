@@ -73,5 +73,78 @@ namespace BoxProblem.Repositories
         {
             return dbContext.Boxes.Where(b => b.CreatedAt.Equals(date)).ToList();
         }
+
+        public List<BoxInventory> SortId(bool increasing)
+        {
+            if(increasing == true)
+            {
+                return dbContext.Boxes.OrderBy(b => b.Id).ToList();
+            }
+            else
+            {
+                return dbContext.Boxes.OrderByDescending(b => b.Id).ToList();
+            }
+        }
+
+        public List<BoxInventory> SortWeight(bool increasing)
+        {
+            if (increasing == true)
+            {
+                return dbContext.Boxes.OrderBy(b => b.Weight).ToList();
+            }
+            else
+            {
+                return dbContext.Boxes.OrderByDescending(b => b.Weight).ToList();
+            }
+        }
+
+        public List<BoxInventory> SortVolume(bool increasing)
+        {
+            if (increasing == true)
+            {
+                return dbContext.Boxes.OrderBy(b => b.Volume).ToList();
+            }
+            else
+            {
+                return dbContext.Boxes.OrderByDescending(b => b.Volume).ToList();
+            }
+        }
+
+        public List<BoxInventory> SortCost(bool increasing)
+        {
+            if (increasing == true)
+            {
+                return dbContext.Boxes.OrderBy(b => b.Cost).ToList();
+            }
+            else
+            {
+                return dbContext.Boxes.OrderByDescending(b => b.Cost).ToList();
+            }
+        }
+
+        public List<BoxInventory> SortCount(bool increasing)
+        {
+            if (increasing == true)
+            {
+                return dbContext.Boxes.OrderBy(b => b.InventoryCount).ToList();
+            }
+            else
+            {
+                return dbContext.Boxes.OrderByDescending(b => b.InventoryCount).ToList();
+            }
+        }
+
+        public List<BoxInventory> SortCreatedAt(bool increasing)
+        {
+            if (increasing == true)
+            {
+                return dbContext.Boxes.OrderBy(b => b.CreatedAt).ToList();
+            }
+            else
+            {
+                return dbContext.Boxes.OrderByDescending(b => b.CreatedAt).ToList();
+            }
+        }
+
     }
 }
