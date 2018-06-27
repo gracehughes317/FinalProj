@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BoxProblem.Models;
+using BoxProblem.Data;
+using BoxProblem.Services;
 
 namespace BoxProblem.Controllers
 {
@@ -24,10 +26,7 @@ namespace BoxProblem.Controllers
         {
             return View();
         }
-        public IActionResult Add()
-        {
-            return View();
-        }
+       
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -65,4 +64,3 @@ namespace BoxProblem.Controllers
         }
     }
 }
-using BoxProblem.Data;
