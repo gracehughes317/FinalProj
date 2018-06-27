@@ -1,0 +1,22 @@
+﻿.icon{
+    height: 100px;
+    width: auto;
+    padding: 10px;
+
+}
+.title {
+    font-size: 50px;
+    font-family: Snell Roundhand, cursive;
+    display: inline;
+}
+.topp{
+    padding: 10px;
+    background-color: white;
+    position: absolute;
+}
+.cent{
+    text-align: center;
+}
+.bcol {
+    background-color: #E1D0B7;
+}
