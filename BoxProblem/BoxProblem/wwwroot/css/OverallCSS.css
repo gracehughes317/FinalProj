@@ -1,8 +1,8 @@
-﻿.icon{
+﻿.icon {
     height: 65px;
     width: auto;
-
 }
+
 .title {
     font-size: 65px;
     font-family: mayqueen;
@@ -10,51 +10,60 @@
     color: #d2d2d2;
     font-weight: 400;
 }
-.topp{
+
+.topp {
     padding: 0px;
     background-color: white;
     top: 0;
     width: 100%;
     height: 70px;
-    border-bottom-style:outset;
+    border-bottom-style: outset;
     border-bottom-width: 2px;
     margin: auto;
     border-bottom-color: #d2d2d2;
     z-index: 99;
 }
+
 .cent {
     text-align: center !important;
 }
+
 .bcol {
     background-color: #E1D0B7;
     height: 100%;
 }
+
 .mySlides {
     width: 100%;
     height: auto;
     position: relative;
     z-index: 2;
 }
+
 .subtitle {
     font-size: 25px;
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
     display: inline;
     color: #d2d2d2;
     margin-right: -250px;
-} 
+}
+
 .abs-pos {
     position: absolute;
-    z-index:1;
+    z-index: 1;
     text-align: center;
     margin-top: 350px;
 }
+
 #carouselExampleSlidesOnly {
     z-index: 0;
 }
-#navbar{
+
+#navbar {
     overflow: hidden;
 }
-#navbar a {
+
+    #navbar a {
         float: left;
         display: block;
     }
@@ -68,27 +77,33 @@
 .padding-top2 {
     padding-top: 2px;
 }
+
 .subtitle:link {
     text-decoration: none;
     color: #d2d2d2;
 }
+
 .subtitle:visited {
     text-decoration: none;
     color: #d2d2d2;
 }
+
 .subtitle:hover {
     text-decoration: underline;
     color: #d2d2d2;
 }
+
 .subtitle:active {
     text-decoration: none;
     color: #d2d2d2;
 }
+
 .icon2 {
     height: 65px;
     width: auto;
     margin-left: 12%;
 }
+
 h1 {
     position: absolute;
     top: 50%;
@@ -106,17 +121,21 @@ h1 {
     color: black;
     font-size: 400%;
 }
+
 .border-box {
     border-style: solid;
     border-color: black;
     border-width: 1px;
 }
+
 .txt-size {
     font-size: 50%;
 }
+
 .w3-animate-opacity {
     animation: opac 3.5s
 }
+
 .hover-boxes {
     overflow: hidden;
     white-space: nowrap;
@@ -124,29 +143,36 @@ h1 {
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: black;
 }
+
 h2 {
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #d2d2d2;
     font-weight: 200;
     text-align: center;
 }
+
 .o-font {
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #d2d2d2;
     font-weight: 200;
 }
-.our-input{
-    width:50%;
+
+.our-input {
+    width: 50%;
 }
+
 .auto-margin {
     margin: auto !important;
 }
+
 .ov-pad {
     padding: 10px;
 }
-.box-shad{
+
+.box-shad {
     box-shadow: none;
 }
+
 h3 {
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
@@ -154,21 +180,26 @@ h3 {
     font-size: 150%;
     color: #d2d2d2;
 }
-.sec-color{
+
+.sec-color {
     color: black;
 }
+
 .bg-black {
     background-color: black;
 }
+
 dl, dd, dt {
     width: 30%;
     text-align: center;
     margin: auto;
     font-weight: normal;
 }
-.margin-top{
-    margin-top:2%;
+
+.margin-top {
+    margin-top: 2%;
 }
+
 .txt-d2 {
     color: #d2d2d2;
 }
@@ -177,6 +208,18 @@ dl, dd, dt {
     padding: 0;
     padding-top: 5px;
 }
+
+table, tr, td, th {
+    text-align: center;
+}
+
+.outbtn {
+    outline: auto;
+}
+.txt-big{
+    font-size: 130%;
+}
+
 @keyframes opac {
     from {
         opacity: 0
