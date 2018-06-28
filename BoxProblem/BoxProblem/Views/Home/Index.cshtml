@@ -7,17 +7,19 @@
 
 <p>Choose parameter to search by:</p>
 
-<form action="~/Home/Search" method="post">
-    Inventory Count: <input type="checkbox" name="InventoryBox" />
-    Cost: <input type="checkbox" name="CostBox" />
-    Volume: <input type="checkbox" name="VolumeBox" />
-    Weight: <input type="checkbox" name="WeightBox" />
-    Date Created: <input type="checkbox" name="CreatedBox" />
+<div id="app">
+    <form action="~/Home/Search" method="post">
+        Inventory Count: <input type="radio" name="InventoryBox" />
+        Cost: <input type="radio" name="CostBox" />
+        Volume: <input type="radio" name="VolumeBox" />
+        Weight: <input type="radio" name="WeightBox" />
+        Can hold liquid: <input type="radio" name="LiquidBox" />
+        Date Created: <input type="radio" name="CreatedBox" />
 
-    <p></p>
-    Search <input type="number" name="toSearch" />
-</form>
-
+        <p></p>
+        Search <input type="number" name="toSearch" />
+    </form>
+</div>
 
 
 
