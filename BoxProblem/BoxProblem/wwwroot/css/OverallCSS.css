@@ -127,8 +127,26 @@ h1 {
 h2 {
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #d2d2d2;
+    font-weight: 200;
+    text-align: center;
 }
-
+.o-font {
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #d2d2d2;
+    font-weight: 200;
+}
+.our-input{
+    width:50%;
+}
+.auto-margin {
+    margin: auto !important;
+}
+.ov-pad {
+    padding: 10px;
+}
+.box-shad{
+    box-shadow: none;
+}
 @keyframes opac {
     from {
         opacity: 0
