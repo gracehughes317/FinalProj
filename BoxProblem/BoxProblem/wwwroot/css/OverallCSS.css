@@ -169,6 +169,14 @@ dl, dd, dt {
 .margin-top{
     margin-top:2%;
 }
+.txt-d2 {
+    color: #d2d2d2;
+}
+
+.pad-0 {
+    padding: 0;
+    padding-top: 5px;
+}
 @keyframes opac {
     from {
         opacity: 0

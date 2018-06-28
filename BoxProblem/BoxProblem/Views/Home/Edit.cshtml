@@ -10,60 +10,59 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
+<div class="form-horizontal cent auto-margin">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "cent auto-margin o-font cent auto-margin o-font text-danger" })
+    @Html.HiddenFor(model => model.Id)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.InventoryCount, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.InventoryCount, new { htmlAttributes = new { @class = "form-control", required = "required" } })
-                @Html.ValidationMessageFor(model => model.InventoryCount, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Weight, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control", required = "required" } })
-                @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Volume, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Volume, new { htmlAttributes = new { @class = "form-control", required = "required" } })
-                @Html.ValidationMessageFor(model => model.Volume, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CanHoldLiquid, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CanHoldLiquid, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CanHoldLiquid, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Cost, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Cost, new { htmlAttributes = new { @class = "form-control", required = "required" } })
-                @Html.ValidationMessageFor(model => model.Cost, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
+    <div class="form-group our-input ov-pad cent auto-margin auto-margin">
+        @Html.LabelFor(model => model.InventoryCount, htmlAttributes: new { @class = "cent auto-margin o-font control-label col-md-2 sec-color" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.InventoryCount, new { htmlAttributes = new { @class = "auto-margin o-font form-control", required = "required" } })
+            @Html.ValidationMessageFor(model => model.InventoryCount, "", new { @class = "cent auto-margin o-font text-danger" })
         </div>
     </div>
-}
 
-<div>
+    <div class="form-group our-input ov-pad cent auto-margin auto-margin">
+        @Html.LabelFor(model => model.Weight, htmlAttributes: new { @class = "cent auto-margin o-font control-label col-md-2 sec-color" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "auto-margin o-font form-control", required = "required" } })
+            @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "cent auto-margin o-font text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group our-input ov-pad cent auto-margin auto-margin">
+        @Html.LabelFor(model => model.Volume, htmlAttributes: new { @class = "cent auto-margin o-font control-label col-md-2 sec-color" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Volume, new { htmlAttributes = new { @class = "auto-margin o-font form-control", required = "required" } })
+            @Html.ValidationMessageFor(model => model.Volume, "", new { @class = "cent auto-margin o-font text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group our-input ov-pad cent auto-margin auto-margin">
+        @Html.LabelFor(model => model.CanHoldLiquid, htmlAttributes: new { @class = "cent auto-margin o-font control-label col-md-2 sec-color" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CanHoldLiquid, new { htmlAttributes = new { @class = "auto-margin o-font form-control" } })
+            @Html.ValidationMessageFor(model => model.CanHoldLiquid, "", new { @class = "cent auto-margin o-font text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group our-input ov-pad cent auto-margin auto-margin">
+        @Html.LabelFor(model => model.Cost, htmlAttributes: new { @class = "cent auto-margin o-font control-label col-md-2 sec-color" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Cost, new { htmlAttributes = new { @class = "auto-margin o-font form-control", required = "required" } })
+            @Html.ValidationMessageFor(model => model.Cost, "", new { @class = "cent auto-margin o-font text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group our-input ov-pad cent auto-margin auto-margin">
+        <div class="col-md-offset-1 col-md-10 cent">
+            <input type="submit" value="Save" class="btn btn-default cent o-font" />
+        </div>
+    </div>
+</div>
+}
+<div class="cent">
     @Html.ActionLink("Back to List", "Index")
 </div>
 <script>document.onreadystatechange = function() {
