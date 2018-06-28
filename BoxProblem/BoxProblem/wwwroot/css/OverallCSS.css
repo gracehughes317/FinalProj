@@ -197,7 +197,7 @@ dl, dd, dt {
 }
 
 .margin-top {
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 .txt-d2 {
@@ -219,6 +219,7 @@ table, tr, td, th {
 .txt-big{
     font-size: 130%;
 }
+
 
 @keyframes opac {
     from {
