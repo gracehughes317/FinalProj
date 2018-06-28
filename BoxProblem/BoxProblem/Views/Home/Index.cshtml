@@ -8,12 +8,12 @@
 <p>Choose parameter to search by:</p>
 <div>
     <form action="~/Home/Search" method="post">
-        Inventory Count: <input type="radio" name="InventoryBox" />
-        Cost: <input type="radio" v-on:input="numMethod" name="CostBox" />
-        Volume: <input type="radio" v-on:input="numMethod" name="VolumeBox" />
-        Weight: <input type="radio" v-on:input="numMethod" name="WeightBox" />
-        Can hold liquid: <input type="radio" v-on:input="boolMethod" name="LiquidBox" />
-        Date Created: <input type="radio" v-on:input="dateMethod" name="CreatedBox" />
+        Inventory Count: <input type="radio" name="search" />
+        Cost: <input type="radio" v-on:input="numMethod" name="search" />
+        Volume: <input type="radio" v-on:input="numMethod" name="search" />
+        Weight: <input type="radio" v-on:input="numMethod" name="search" />
+        Can hold liquid: <input type="radio" v-on:input="boolMethod" name="search" />
+        Date Created: <input type="radio" v-on:input="dateMethod" name="search" />
         <br />
         <input type="number" v-if="show1" />
         <input type="radio" v-if="show2" />
