@@ -54,13 +54,19 @@ namespace BoxProblem.Controllers
             return View(toAdd);
         }
         [HttpPost]
-        public ActionResult Search(double toSearch, bool InventoryBox, bool LiquidBox, bool CostBox, bool VolumeBox, bool WeightBox, DateTime DateCreated)
+        public ActionResult Search(double toSearch, bool InventoryBox, bool CostBox, bool VolumeBox, bool WeightBox)
         {
             if(InventoryBox == true)
             {
-                return View(service.FilterCount((int)toSearch));
+                service.FilterCount((int)toSearch);
             }
 
+        }
+
+        public ActionResult Edit(int id)
+        {
+            BoxInventory box = service.GetBoxInventoryById(id);
+            return View(box);
         }
 
         public ActionResult Edit(int id)
