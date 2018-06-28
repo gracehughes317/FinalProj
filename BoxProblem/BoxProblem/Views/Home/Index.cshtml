@@ -6,18 +6,21 @@
 @Html.ActionLink("Add", "Create")
 
 <p>Choose parameter to search by:</p>
-
-<form action="~/Home/Search" method="post">
-    Inventory Count: <input type="radio" name="InventoryBox" />
-    Cost: <input type="radio" name="CostBox" />
-    Volume: <input type="radio" name="VolumeBox" />
-    Weight: <input type="radio" name="WeightBox" />
-    Can hold liquid: <input type="radio" name="LiquidBox" />
-    Date Created: <input type="radio" name="CreatedBox" />
-    <br />
-    Search <input type="number" name="ToSearch" />
-</form>
-
+<div>
+    <form action="~/Home/Search" method="post">
+        Inventory Count: <input type="radio" name="InventoryBox" />
+        Cost: <input type="radio" v-on:input="numMethod" name="CostBox" />
+        Volume: <input type="radio" v-on:input="numMethod" name="VolumeBox" />
+        Weight: <input type="radio" v-on:input="numMethod" name="WeightBox" />
+        Can hold liquid: <input type="radio" v-on:input="boolMethod" name="LiquidBox" />
+        Date Created: <input type="radio" v-on:input="dateMethod" name="CreatedBox" />
+        <br />
+        <input type="number" v-if="show1" />
+        <input type="radio" v-if="show2" />
+        <input type="datetime-local" v-if="show3" />
+        Search <input type="number" name="toSearch" />
+    </form>
+</div>
 <table class="table">
     <tr class="tableHeader">
         <th>@Html.DisplayNameFor(model => model.InventoryCount)</th>
@@ -43,3 +46,26 @@
         </tr>
     }
 </table>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            show1: false,
+            show2: false,
+            show3: false
+        },
+        methods: {
+            numMethod: function () {
+                this.show1 = true;
+            },
+            boolMethod: function () {
+                this.show2 = true;
+            },
+            dateMethod: function () {
+                this.show3 = true;
+            }
+
+        }
+    })
+</script>
