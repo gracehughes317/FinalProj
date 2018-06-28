@@ -4,21 +4,28 @@
 }
 <h2>Home</h2>
 @Html.ActionLink("Add", "Create")
-
 <p>Choose parameter to search by:</p>
-<div>
-    <form action="~/Home/Search" method="post">
-        Inventory Count: <input type="radio" name="search" />
-        Cost: <input type="radio" v-on:input="numMethod" name="search" />
-        Volume: <input type="radio" v-on:input="numMethod" name="search" />
-        Weight: <input type="radio" v-on:input="numMethod" name="search" />
-        Can hold liquid: <input type="radio" v-on:input="boolMethod" name="search" />
-        Date Created: <input type="radio" v-on:input="dateMethod" name="search" />
+<div id="app">
+    <form method="post">
+        Inventory Count: <input type="radio" v-on:click="numMethod" name="search" />
         <br />
-        <input type="number" v-if="show1" />
-        <input type="radio" v-if="show2" />
-        <input type="datetime-local" v-if="show3" />
-        Search <input type="number" name="toSearch" />
+        Cost: <input type="radio" v-on:click="numMethod" name="search" />
+        <br />
+        Volume: <input type="radio" v-on:click="numMethod" name="search" />
+        <br />
+        Weight: <input type="radio" v-on:click="numMethod" name="search" />
+        <br />
+        Can hold liquid: <input type="radio" v-on:click="boolMethod" name="search" id="boolean" />
+        <br />
+        Date Created: <input type="radio" v-on:click="dateMethod" name="search" id="dateTime" />
+        <br />
+        Type in a number: <input type="number" v-if="show1" name="toSearch" />
+        <br />
+        Check the box to search for boxes that can hold liquid: <input type="radio" v-if="show2" name="toSearch" />
+        <br />
+        Type in a date and time: <input type="datetime-local" v-if="show3" name="toSearch" />
+        <br />
+        <input type="submit" value="Search" />
     </form>
 </div>
 <table class="table">
@@ -57,13 +64,25 @@
         },
         methods: {
             numMethod: function () {
-                this.show1 = true;
+                {
+                    this.show1 = true;
+                    this.show2 = false;
+                    this.show3 = false;
+                }
             },
             boolMethod: function () {
-                this.show2 = true;
+                if (document.getElementById('boolean').checked) {
+                    this.show2 = true;
+                    this.show1 = false;
+                    this.show3 = false;
+                }
             },
             dateMethod: function () {
-                this.show3 = true;
+                if (document.getElementById('dateTime').checked) {
+                    this.show3 = true;
+                    this.show2 = false;
+                    this.show1 = false;
+                }
             }
 
         }
