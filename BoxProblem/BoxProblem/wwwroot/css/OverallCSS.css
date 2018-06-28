@@ -1,0 +1,136 @@
+﻿.icon{
+    height: 65px;
+    width: auto;
+
+}
+.title {
+    font-size: 65px;
+    font-family: mayqueen;
+    display: inline;
+    color: #d2d2d2;
+    font-weight: 400;
+}
+.topp{
+    padding: 0px;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    border-bottom-style:outset;
+    border-bottom-width: 2px;
+    margin: auto;
+    border-bottom-color: #d2d2d2;
+    z-index: 99;
+}
+.cent{
+    text-align: center;
+}
+.bcol {
+    background-color: #E1D0B7;
+    height: 100%;
+}
+.mySlides {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+.subtitle {
+    font-size: 25px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: inline;
+    color: #d2d2d2;
+    margin-right: -250px;
+} 
+.abs-pos {
+    position: absolute;
+    z-index:1;
+    text-align: center;
+    margin-top: 350px;
+}
+#carouselExampleSlidesOnly {
+    z-index: 0;
+}
+#navbar{
+    overflow: hidden;
+}
+#navbar a {
+        float: left;
+        display: block;
+    }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.padding-top2 {
+    padding-top: 2px;
+}
+.subtitle:link {
+    text-decoration: none;
+    color: #d2d2d2;
+}
+.subtitle:visited {
+    text-decoration: none;
+    color: #d2d2d2;
+}
+.subtitle:hover {
+    text-decoration: underline;
+    color: #d2d2d2;
+}
+.subtitle:active {
+    text-decoration: none;
+    color: #d2d2d2;
+}
+.icon2 {
+    height: 65px;
+    width: auto;
+    margin-left: 12%;
+}
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 50;
+    text-align: center;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-color: rgba(255,255,255,.75);
+    box-shadow: 0 1em 2em -1em rgba(0,0,0,.5);
+    padding: 1em 2em;
+    line-height: 1.5;
+    color: black;
+    font-size: 400%;
+}
+.border-box {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+.txt-size {
+    font-size: 50%;
+}
+.w3-animate-opacity {
+    animation: opac 3.5s
+}
+.hover-boxes {
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: black;
+}
+
+@keyframes opac {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
