@@ -19,10 +19,19 @@ namespace BoxProblem.Controllers
             service = new BoxInventoryService(context);
         }
 
-        public IActionResult Index()
+        public IActionResult Index(List<BoxInventory> model = null, bool doSearch = false)
         {
-            return View(service.GetAllBoxInventorys());
+            if (!doSearch)
+            {
+                return View(service.GetAllBoxInventorys());
+            }
+            else
+            {
+                return View(model);
+            }
         }
+
+
 
         public IActionResult Error()
         {
@@ -55,11 +64,11 @@ namespace BoxProblem.Controllers
         }
 
         [HttpPost]
-        public ActionResult Search(double toSearch, bool InventoryBox, bool CostBox, bool VolumeBox, bool WeightBox)
+        public ActionResult Index(string toSearch, string search)
         {
-            if (InventoryBox == true)
+            if (search.ToLower() == "inventorycount")
             {
-                return View(service.FilterCount((int)toSearch));
+                return View(service.FilterCount(Int32.Parse(toSearch)));
             }
             else if (CostBox == true)
             {
@@ -115,3 +124,21 @@ namespace BoxProblem.Controllers
 }
 
         
+            else if (search.ToLower() == "costbox")
+            {
+                return View(service.FilterCost(Double.Parse(toSearch)));
+            else if (search.ToLower() == "volumebox")
+            {
+                return View(service.FilterVolume(Int32.Parse(toSearch)));
+            }
+            else if (search.ToLower() == "weightbox")
+            {
+                return View(service.FilterWeight(Int32.Parse(toSearch)));
+            }
+            else if (search.ToLower() == "liquidbox")
+            {
+                return View(service.FilterCanHoldLiquid(Boolean.Parse(toSearch)));
+            }
+            else
+            {
+                return View();

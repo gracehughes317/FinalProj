@@ -67,22 +67,19 @@
         el: '#app',
         data: {
             show1: false,
-            show2: false,
-            show3: false
+            show2: false
         },
         methods: {
             numMethod: function() {
                 {
                     this.show1 = true;
                     this.show2 = false;
-                    this.show3 = false;
                 }
             },
             boolMethod: function() {
                 if (document.getElementById('boolean').checked) {
                     this.show2 = true;
                     this.show1 = false;
-                    this.show3 = false;
                 }
             },
             dateMethod: function() {
