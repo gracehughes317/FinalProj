@@ -4,11 +4,11 @@
 
 }
 .title {
-    font-size: 50px;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 65px;
+    font-family: mayqueen;
     display: inline;
     color: #d2d2d2;
-    margin-top: 30px;
+    font-weight: 400;
 }
 .topp{
     padding: 0px;
