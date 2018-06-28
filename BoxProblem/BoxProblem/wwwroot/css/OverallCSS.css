@@ -117,6 +117,13 @@ h1 {
 .w3-animate-opacity {
     animation: opac 3.5s
 }
+.hover-boxes {
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: black;
+}
 
 @keyframes opac {
     from {

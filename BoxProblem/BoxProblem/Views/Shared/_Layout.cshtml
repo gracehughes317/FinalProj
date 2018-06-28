@@ -14,7 +14,7 @@
     <div class="topp row cent" id="navbar">
         <div class="col-md-1 padding-top2">
             <a href="#top">
-                <img src="Images/box.png" class="icon" />
+                <img src="Images/box.png" class="icon" data-toggle="popover" data-content="Top" data-placement="right" data-trigger="hover" />
             </a>
         </div>
         <div class="col-md-10">
@@ -22,7 +22,7 @@
         </div>
         <div class="col-md-1">
             <a href="#view">
-                <img src="Images/inventory2.png" class="icon2" />
+                <img src="Images/inventory2.png" class="icon2" data-toggle="popover" data-placement="left" data-content="Inventory" data-trigger="hover"/>
             </a>
         </div>
     </div>
@@ -86,4 +86,8 @@ function myFunction() {
         } else {
             navbar.classList.remove("sticky");
         }
-}</script>
+    }
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+    </script>
