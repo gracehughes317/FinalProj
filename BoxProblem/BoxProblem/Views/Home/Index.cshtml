@@ -6,20 +6,20 @@
 @Html.ActionLink("Add", "Create")
 <p>Choose parameter to search by:</p>
 <div id="app">
-    <form method="post">
-        Inventory Count: <input type="radio" v-on:click="numMethod" name="search" />
+    <form action="@Url.Action("Index")" method="post">
+        Inventory Count: <input type="radio" v-on:click="numMethod" name="search" value="inventoryCount" />
         <br />
-        Cost: <input type="radio" v-on:click="numMethod" name="search" />
+        Cost: <input type="radio" v-on:click="numMethod" name="search" value="costBox" />
         <br />
-        Volume: <input type="radio" v-on:click="numMethod" name="search" />
+        Volume: <input type="radio" v-on:click="numMethod" name="search" value="volumeBox" />
         <br />
-        Weight: <input type="radio" v-on:click="numMethod" name="search" />
+        Weight: <input type="radio" v-on:click="numMethod" name="search" value="weightBox"/>
         <br />
-        Can hold liquid: <input type="radio" v-on:click="boolMethod" name="search" id="boolean" />
+        Can hold liquid: <input type="radio" v-on:click="boolMethod" name="search" id="boolean" value="liquidBox"/>
         <br />
-        Date Created: <input type="radio" v-on:click="dateMethod" name="search" id="dateTime" />
+        Date Created: <input type="radio" v-on:click="dateMethod" name="search" id="dateTime" value="dateBox"/>
         <br />
-        Type in a number: <input type="number" v-if="show1" name="toSearch" />
+        Type in a number: <input type="number" step="0.01" v-if="show1" name="toSearch" />
         <br />
         Check the box to search for boxes that can hold liquid: <input type="radio" v-if="show2" name="toSearch" />
         <br />
