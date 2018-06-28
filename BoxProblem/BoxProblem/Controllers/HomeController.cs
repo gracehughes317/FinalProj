@@ -85,12 +85,6 @@ namespace BoxProblem.Controllers
             return View(box);
         }
 
-        public ActionResult Edit(int id)
-        {
-            BoxInventory box = service.GetBoxInventoryById(id);
-            return View(box);
-        }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(BoxInventory box)
