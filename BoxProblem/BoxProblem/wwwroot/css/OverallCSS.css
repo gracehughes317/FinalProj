@@ -126,6 +126,7 @@ h1 {
 }
 h2 {
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #d2d2d2;
 }
 
 @keyframes opac {
