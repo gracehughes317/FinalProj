@@ -10,22 +10,30 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>@Html.DisplayNameFor(model => model.InventoryCount)</dt>
-        <dd>@Html.DisplayFor(model => model.InventoryCount)</dd>
+        <dd class="o-font">@Html.DisplayFor(model => model.InventoryCount)</dd>
 
         <dt>@Html.DisplayNameFor(model => model.Weight)</dt>
-        <dd>@Html.DisplayFor(model => model.Weight)</dd>
+        <dd class="o-font">@Html.DisplayFor(model => model.Weight)</dd>
 
         <dt>@Html.DisplayNameFor(model => model.Volume)</dt>
-        <dd>@Html.DisplayFor(model => model.Volume)</dd>
+        <dd class="o-font">@Html.DisplayFor(model => model.Volume)</dd>
 
         <dt>@Html.DisplayNameFor(model => model.CanHoldLiquid)</dt>
-        <dd>@Html.DisplayFor(model => model.CanHoldLiquid)</dd>
+        <dd class="o-font">@Html.DisplayFor(model => model.CanHoldLiquid)</dd>
 
         <dt>@Html.DisplayNameFor(model => model.Cost)</dt>
-        <dd>@Html.DisplayFor(model => model.Cost)</dd>
+        <dd class="o-font">@Html.DisplayFor(model => model.Cost)</dd>
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+<div class="form-actions no-color cent ">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+</div>
+<div class="cent">
     @Html.ActionLink("Back to List", "Index")
-</p>
+</div>
+<script>document.onreadystatechange = function() {
+        if (document.readyState == "complete") {
+            // document is ready. Do your stuff here
+            window.location = '#view';
+        }
+}</script>

@@ -22,8 +22,8 @@
     border-bottom-color: #d2d2d2;
     z-index: 99;
 }
-.cent{
-    text-align: center;
+.cent {
+    text-align: center !important;
 }
 .bcol {
     background-color: #E1D0B7;
@@ -146,6 +146,28 @@ h2 {
 }
 .box-shad{
     box-shadow: none;
+}
+h3 {
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 150%;
+    color: #d2d2d2;
+}
+.sec-color{
+    color: black;
+}
+.bg-black {
+    background-color: black;
+}
+dl, dd, dt {
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    font-weight: normal;
+}
+.margin-top{
+    margin-top:2%;
 }
 @keyframes opac {
     from {
