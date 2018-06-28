@@ -86,10 +86,6 @@ namespace BoxProblem.Controllers
             {
                 return View(service.FilterCanHoldLiquid(Boolean.Parse(toSearch)));
             }
-            else if (search.ToLower() == "datebox")
-            {
-                return View(service.FilterCreatedAt(DateTime.Parse(toSearch)));
-            }
             else
             {
                 return View();

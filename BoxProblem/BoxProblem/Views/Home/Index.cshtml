@@ -17,13 +17,9 @@
         <br />
         Can hold liquid: <input type="radio" v-on:click="boolMethod" name="search" id="boolean" value="liquidBox"/>
         <br />
-        Date Created: <input type="radio" v-on:click="dateMethod" name="search" id="dateTime" value="dateBox"/>
-        <br />
         Type in a number: <input type="number" step="0.01" v-if="show1" name="toSearch" />
         <br />
-        Check the box to search for boxes that can hold liquid: <input type="radio" v-if="show2" name="toSearch" />
-        <br />
-        Type in a date and time: <input type="datetime-local" v-if="show3" name="toSearch" />
+        Does the box hold liquid? <input type="text" v-if="show2" name="toSearch" placeholder="true or false"/>
         <br />
         <input type="submit" value="Search" />
     </form>
@@ -59,32 +55,21 @@
         el: '#app',
         data: {
             show1: false,
-            show2: false,
-            show3: false
+            show2: false
         },
         methods: {
             numMethod: function () {
                 {
                     this.show1 = true;
                     this.show2 = false;
-                    this.show3 = false;
                 }
             },
             boolMethod: function () {
                 if (document.getElementById('boolean').checked) {
                     this.show2 = true;
                     this.show1 = false;
-                    this.show3 = false;
-                }
-            },
-            dateMethod: function () {
-                if (document.getElementById('dateTime').checked) {
-                    this.show3 = true;
-                    this.show2 = false;
-                    this.show1 = false;
                 }
             }
-
-        }
+            }
     })
 </script>
