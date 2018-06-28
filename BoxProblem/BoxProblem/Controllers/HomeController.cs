@@ -54,13 +54,31 @@ namespace BoxProblem.Controllers
             return View(toAdd);
         }
         [HttpPost]
-        public ActionResult Search(double toSearch, bool InventoryBox, bool CostBox, bool VolumeBox, bool WeightBox)
+        public ActionResult Search(double ToSearch, bool InventoryBox, bool LiquidBox, bool CostBox, bool VolumeBox, bool WeightBox, DateTime DateCreated)
         {
-            if(InventoryBox == true)
+            List<BoxInventory> BoxList = new List<BoxInventory>();
+            if (InventoryBox == true)
             {
-                service.FilterCount((int)toSearch);
+                BoxList = service.FilterCount((int)ToSearch);
+               
             }
-
+            else if (LiquidBox == true)
+            {
+                //BoxList = service.FilterCanHoldLiquid();
+            }
+            else if (CostBox == true)
+            {
+                BoxList = service.FilterCost(ToSearch);
+            }
+            else if (VolumeBox == true)
+            {
+                BoxList = service.FilterVolume((int)ToSearch);
+            }
+            else if (WeightBox == true)
+            {
+                BoxList = service.FilterWeight((int)ToSearch);
+            }
+            return View(BoxList);
         }
 
         public ActionResult Edit(int id)
